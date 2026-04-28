@@ -1,0 +1,293 @@
+/* ============================= */
+/* 🎨 CORES PADRÃO (DONNA MAFIA) */
+/* ============================= */
+:root {
+  --preto: #090909;
+  --dourado: #c9a227;
+  --vinho: #6d1428;
+  --branco: #ffffff;
+  --cinza: #f5f5f5;
+}
+
+/* ============================= */
+/* RESET */
+/* ============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--preto); /* fundo escuro */
+  color: var(--branco);
+  line-height: 1.6;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================= */
+/* HEADER (IGUAL DO DIMI) */
+/* ============================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 7%;
+  background: #000;
+
+  border-bottom: 2px solid var(--dourado); /* linha dourada */
+}
+
+/* CONTAINER LOGO + TEXTO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* IMAGEM DA LOGO */
+.logo-img {
+  width: 70px;
+}
+
+/* TEXTO AO LADO */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* TEXTO "Barbearia" */
+.barbearia {
+  font-size: 14px;
+  color: white;
+}
+
+/* TEXTO "Donna Mafia" */
+.nome {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--dourado);
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  gap: 18px;
+}
+
+/* HOVER */
+.menu a:hover {
+  color: var(--dourado);
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+.hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 7%;
+}
+
+/* CAIXA */
+.hero div {
+  max-width: 700px;
+  background: var(--cinza);
+  color: black;
+  padding: 35px;
+  border-radius: 20px;
+}
+
+/* TAG */
+.tag {
+  background: var(--vinho);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* TITULOS */
+h1 {
+  color: var(--vinho);
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: var(--dourado);
+  margin-bottom: 20px;
+}
+
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+.btn {
+  background: var(--dourado);
+  color: black;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* SEÇÕES */
+/* ============================= */
+.section {
+  padding: 70px 7%;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARDS */
+.card,
+.text-box,
+.contact-box {
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+/* ============================= */
+/* GALERIA 3x3 */
+/* ============================= */
+.gallery {
+  padding: 50px 7%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  justify-items: center;
+}
+
+/* IMAGENS */
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  height: 280px;
+
+  object-fit: cover;
+  border-radius: 12px;
+
+  border: 2px solid var(--dourado);
+  transition: 0.3s;
+}
+
+/* HOVER */
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* CONTATO */
+/* ============================= */
+.contact-box {
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* ============================= */
+/* BOTÕES FLUTUANTES */
+/* ============================= */
+
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  background: #25D366;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 28px;
+  z-index: 999;
+}
+
+/* INSTAGRAM */
+.instagram-float {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  background: var(--vinho);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 24px;
+  z-index: 999;
+}
+
+/* HOVER BOTÕES */
+.whatsapp-float:hover,
+.instagram-float:hover {
+  transform: scale(1.1);
+}
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+@media (max-width: 768px) {
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    gap: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* vira 1 por linha */
+  }
+
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero div {
+    padding: 25px;
+  }
+}
